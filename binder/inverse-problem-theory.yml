@@ -1,0 +1,42 @@
+# Using Python 3.7 
+# External repos for MITgcm type analysis:
+# - xmitgcm
+# - xgcm
+# - ecco_v4_py
+name: inverse-problem-theory
+channels:
+    - conda-forge
+dependencies:
+    - defaults::python=3.7
+      # Python supported libraries
+    - defaults::numpy
+    - defaults::scipy
+    - defaults::pandas
+      # Standard in conda, but we want conda-forge channel versions
+    - bottleneck
+    - dask
+    - future
+      # Essential MITgcm packages
+    - xarray
+    - netCDF4
+    - cftime
+    - docrep=0.2.7
+    - cartopy
+    - pyresample
+    - cachetools
+    - ipykernel
+#      # ESMF regridding packages
+#    - xesmf
+#    - esmpy=8.0.0=py*
+      # Helpful for submitting PRs
+    - pytest-cov
+    - codecov
+    - black
+      # Non-essential packages
+    - cmocean
+    - datashader
+    - fsspec
+    - pyviz::geoviews 
+    - pyviz::holoviews
+    - zarr
+    - aiohttp
